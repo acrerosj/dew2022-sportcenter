@@ -1,4 +1,6 @@
 /* eslint-disable comma-spacing */
+const Activity = require('./activity');
+const Facility = require('./facility');
 const Service = require('./service');
 
 class SportCenter {
@@ -43,6 +45,14 @@ class SportCenter {
         break;
       default: break;
     }
+  }
+
+  getFacilities() {
+    return this.#services.filter((s) => s instanceof Facility);
+  }
+
+  getActivities() {
+    return this.#services.filter((s) => s instanceof Activity);
   }
 }
 

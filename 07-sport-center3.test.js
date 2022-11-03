@@ -19,23 +19,10 @@ sc.addService(weight);
 sc.addService(pool);
 sc.addService(step);
 
-test('Get unordered services. First add is the first in the list.', () => {
-  expect(sc.getServices()).toEqual([spa, zumba, spinning, pilates, weight, pool, step]);
+test('Get facilities', () => {
+  expect(sc.getFacilities()).toEqual([spa, weight, pool]);
 });
 
-test('Get services order by name.', () => {
-  sc.orderServicesBy('name');
-  expect(sc.getServices()).toEqual([pilates, spa, spinning, step, pool, weight, zumba]);
-});
-
-test('Get services order by rating.', () => {
-  spinning.giveRating(7);
-  pool.giveRating(6);
-  zumba.giveRating(5);
-  pilates.giveRating(4);
-  step.giveRating(3);
-  spa.giveRating(2);
-  weight.giveRating(1);
-  sc.orderServicesBy('rating');
-  expect(sc.getServices()).toEqual([spinning, pool, zumba, pilates, step, spa, weight]);
+test('Get activities', () => {
+  expect(sc.getActivities()).toEqual([zumba, spinning, pilates, step]);
 });

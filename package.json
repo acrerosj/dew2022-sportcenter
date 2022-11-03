@@ -1,0 +1,25 @@
+{
+  "name": "sportcenter",
+  "version": "1.0.0",
+  "description": "Sport Center Manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "sport",
+    "center",
+    "manager"
+  ],
+  "author": "Andrés",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.3",
+    "@types/jest": "^27.0.2",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.2.4",
+    "jest": "^27.3.1"
+  }
+}
